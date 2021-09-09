@@ -9,6 +9,25 @@ if(isset($_GET["buscarFuncionario"])){
 
  $count = count($empresax);
 
+ if (
+    !empty($_GET["first_name"]) && !empty($_GET["last_name"]) &&
+    !empty($_GET["email"]) && !empty($_GET["gender"]) &&
+    !empty($_GET["ip_address"]) && !empty($_GET["country"])
+    && !empty($_GET["department"])
+) {
+    adicionarFuncionario([
+        "first_name" => $_GET["first_name"],
+        "last_name" => $_GET["last_name"],
+        "email" => $_GET["email"],
+        "gender" => $_GET["gender"],
+        "ip_address" => $_GET["ip_address"],
+        "country" => $_GET["country"],
+        "department" => $_GET["department"],
+    ]);
+
+    header('location:' . dirname($_SERVER['PHP_SELF']));
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +38,8 @@ if(isset($_GET["buscarFuncionario"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa X</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- <form action="">
@@ -27,7 +48,7 @@ if(isset($_GET["buscarFuncionario"])){
     </form> -->
     <table border="1">
         <h1>Funcionários da Empresa X</h1>
-        <h3>A empresa conta com <?= $count ?> funcionários</h3>
+        <h3>A empresa conta com  <em> <?= $count ?> </em>  funcionários</h3>
         <form action="">
             <h4>Pesquisar por nome</h4>
         <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"]:""?>" 
@@ -61,5 +82,58 @@ if(isset($_GET["buscarFuncionario"])){
             endforeach;
         ?>
         </table>
+
+        <div id="cadastrar__area">
+            <form>
+                <h1>CADASTRAR FUNCIONARIO</h1>
+                <div id="perguntas__casdrastro">
+                    <div class="perguntas">
+                        <label for="firstName">Nome
+                            <input id="firstName" name="first_name" type="text" required>
+                        </label>
+                    </div>
+                    <div class="perguntas">
+                        <label for="lastName">Sobrenome
+                            <input id="lastName" name="last_name" type="text" required>
+                        </label>
+                    </div>
+                    <div class="perguntas">
+                        <label for="email">E-mail
+                            <input id="email" name="email" type="text" required>
+                        </label>
+                    </div>
+                    <div class="perguntas">
+                        <label for="ipAddress">Endereço de IP
+                            <input id="ipAddress" name="ip_address" required>
+                        </label>
+                    </div>
+                    <div class="perguntas">
+                        <label for="country">País
+                            <input id="country" name="country" type="text" required>
+                        </label>
+                    </div>
+                    <div class="perguntas">
+                        <label for="department">Departamento
+                            <input id="department" name="department" type="text" required>
+                        </label>
+                    </div>
+                    <div class="perguntas">
+                        <label for="gender">Gênero
+                            <select name="gender" id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="button__area">
+                    <button type="button" id="button__cancelar">CANCELAR</button>
+                    <button id="button__cadastrar__funcionario">CADASTRAR</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
 </body>
 </html>

@@ -22,3 +22,12 @@ function buscarFuncionario($empresax, $first_name) {
     }
     return $empresaxFiltro;
 }
+
+function adicionarFuncionario(array $funcionario) {
+    $empresax = lerArquivo('empresax.json');
+    $id = count($empresax) + 1;
+    $funcionario['id'] = $id;
+    $empresax[] = $funcionario;
+    $json = json_encode($empresax);
+    file_put_contents('empresax.json', $json);
+  }

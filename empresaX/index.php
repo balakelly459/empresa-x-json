@@ -3,6 +3,12 @@
 require("./funcoes.php");
 $empresax = lerArquivo("./empresax.json");
 
+if(isset($_GET["buscarFuncionario"])){
+    $empresax = buscarFuncionario($empresax, $_GET["buscarFuncionario"]);
+ }
+
+ $count = count($empresax);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +26,12 @@ $empresax = lerArquivo("./empresax.json");
         <button>🔍</button>
     </form> -->
     <table border="1">
-        <h1>Funcionários da empresa X</h1>
-        <h3>A empresa conta com 1001 funcionários</h3>
+        <h1>Funcionários da Empresa X</h1>
+        <h3>A empresa conta com <?= $count ?> funcionários</h3>
         <form action="">
             <h4>Pesquisar por nome</h4>
         <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"]:""?>" 
-        name="buscarFuncionario" placeholder="Buscar funcionario">
+        name="buscarFuncionario" placeholder="Buscar funcionário">
         <button>🔍</button>
     </form>
         <tr>

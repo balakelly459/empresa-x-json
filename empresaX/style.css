@@ -19,11 +19,13 @@ body{
      height: 33px;
      width: 100px;
      border-radius: 15px 15px 15px 15px;
+     cursor: pointer;
  }
 
  #button__cadastrar{
     height: 60px;
     width: 105px;
+    cursor: pointer;
  }
 
  h1{
@@ -44,4 +46,13 @@ table tr:nth-child(odd) {background: rgb(184, 182, 182)}
  table{
      background-color: rgb(117, 116, 116);
      border-radius: 8px;
+ }
+
+ #deletar:hover{ 
+    background-color: red;
+    color: white;
+ }
+
+ #button_lupa:hover{
+    background-color: rgb(177, 175, 175);
  }

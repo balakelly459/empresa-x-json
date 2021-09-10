@@ -46,7 +46,7 @@ if(isset($_GET["buscarFuncionario"])){
         <input type="text" name="funcionario" placeholder="Buscar funcionario">
         <button>🔍</button>
     </form> -->
-    <table border="1">
+    <table >
         <h1>Funcionários da Empresa X</h1>
         <h2>A empresa conta com <em> <?= $count ?> </em> funcionários</h2>
         <form action="">

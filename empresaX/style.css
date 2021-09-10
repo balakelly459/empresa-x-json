@@ -11,7 +11,7 @@ body{
     }
  input{
      height: 30px;
-     width: 985px;
+     width: 960px;
      border-radius: 15px 0px 15px 0px;
  }
 
@@ -41,3 +41,7 @@ body{
 table tr:nth-child(even) {background: rgb(250, 250, 250)}
 table tr:nth-child(odd) {background: rgb(184, 182, 182)}
 
+ table{
+     background-color: rgb(117, 116, 116);
+     border-radius: 8px;
+ }

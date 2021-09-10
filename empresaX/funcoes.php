@@ -12,11 +12,27 @@ function lerArquivo($nomeArquivo) {
    return $jsonArray;
 }
 
-function buscarFuncionario($empresax, $first_name) {
+// function buscarFuncionario($empresax, $first_name) {
     
-    $expresaxFiltro = [];
-    foreach($empresax as $funcionario) {
-        if ($funcionario->first_name == $first_name) {
+//     $expresaxFiltro = [];
+//     foreach($empresax as $funcionario) {
+//         if ($funcionario->first_name == $first_name) {
+//             $empresaxFiltro[] = $funcionario;
+//         }
+//     }
+//     return $empresaxFiltro;
+// }
+
+function buscarFuncionario($empresax, $nome)
+{
+
+    $empresaxFiltro = [];
+    foreach ($empresax as $funcionario) {
+        if (
+            strpos($funcionario->first_name, $nome) !== false ||
+            strpos($funcionario->last_name, $nome) !== false ||
+            strpos($funcionario->department, $nome) !== false
+        ) {
             $empresaxFiltro[] = $funcionario;
         }
     }

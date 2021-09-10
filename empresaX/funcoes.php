@@ -47,3 +47,17 @@ function adicionarFuncionario(array $funcionario) {
     $json = json_encode($empresax);
     file_put_contents('empresax.json', $json);
   }
+
+  function deletarFuncionario($nomeArquivo, $idFuncionario) {
+      $empresax = lerArquivo($nomeArquivo);
+
+      foreach($empresax as $chave => $funcionario) {
+          if ($funcionario->id == $idFuncionario) {
+              unset($empresax[$chave]);
+          }
+      }
+
+      $json = json_encode($empresax);
+
+      file_put_contents($nomeArquivo, $json);
+  }

@@ -46,6 +46,7 @@ table tr:nth-child(odd) {background: rgb(184, 182, 182)}
  table{
      background-color: rgb(117, 116, 116);
      border-radius: 8px;
+     margin-bottom: 20px;
  }
 
  #deletar:hover{ 

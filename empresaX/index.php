@@ -54,6 +54,7 @@ if(isset($_GET["buscarFuncionario"])){
         <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"]:""?>" 
         name="buscarFuncionario" placeholder="Buscar funcionário">
         <button>🔍</button>
+        <button type="button" id="button__cadastrar">CADASTRAR</button>
     </form>
         <tr>
             <th>ID</th>

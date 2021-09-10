@@ -56,3 +56,7 @@ table tr:nth-child(odd) {background: rgb(184, 182, 182)}
  #button_lupa:hover{
     background-color: rgb(177, 175, 175);
  }
+ 
+ tr th{
+     height: 50px;
+ }

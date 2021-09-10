@@ -55,7 +55,8 @@ if(isset($_GET["buscarFuncionario"])){
         <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"]:""?>" 
         name="buscarFuncionario" placeholder="Buscar funcionário">
         <button>🔍</button>
-        <button type="button" id="button__cadastrar">CADASTRAR NOVO FUNCIONÁRIO</button>
+        <button type="button" id="button__cadastrar">CADASTRAR FUNCIONÁRIO</button>
+        
         </div>
     </form>
         <tr>
@@ -67,6 +68,7 @@ if(isset($_GET["buscarFuncionario"])){
             <th>Endereço IP</th>
             <th>País</th>
             <th>Departamento</th>
+            <th>Deletar funcionário</th>
         </tr>
         <?php
         foreach ($empresax as $funcionario):
@@ -80,6 +82,7 @@ if(isset($_GET["buscarFuncionario"])){
             <td><?= $funcionario->ip_address?></td>
             <td><?= $funcionario->country?></td>
             <td><?= $funcionario->department?></td>
+            <td><button>Excluir</button></td>
         </tr>
         <?php
             endforeach;

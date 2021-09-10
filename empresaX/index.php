@@ -48,13 +48,15 @@ if(isset($_GET["buscarFuncionario"])){
     </form> -->
     <table border="1">
         <h1>Funcionários da Empresa X</h1>
-        <h3>A empresa conta com  <em> <?= $count ?> </em>  funcionários</h3>
+        <h2>A empresa conta com <em> <?= $count ?> </em> funcionários</h2>
         <form action="">
-            <h4>Pesquisar por nome</h4>
+            <h4>Pesquisar por nome: </h4>
+            <div>
         <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"]:""?>" 
         name="buscarFuncionario" placeholder="Buscar funcionário">
         <button>🔍</button>
-        <button type="button" id="button__cadastrar">CADASTRAR</button>
+        <button type="button" id="button__cadastrar">CADASTRAR NOVO FUNCIONÁRIO</button>
+        </div>
     </form>
         <tr>
             <th>ID</th>

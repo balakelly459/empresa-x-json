@@ -16,7 +16,7 @@
 }
 
 #cadastrar__area form {
-    background-color: #99b3e9;
+    background-color: rgb(152, 191, 218);
     height: 400px;
     width: 550px;
     display: flex;
@@ -79,7 +79,7 @@ h3 {
 }
 
 #button__cadastrar__funcionario:hover {
-    color: white;
+    color: rgb(47, 131, 14);
 }
 
 .button__area {

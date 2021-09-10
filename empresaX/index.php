@@ -50,7 +50,7 @@ if(isset($_GET["buscarFuncionario"])){
         <h1>Funcionários da Empresa X</h1>
         <h2>A empresa conta com <em> <?= $count ?> </em> funcionários</h2>
         <form action="">
-            <h4>Pesquisar por nome: </h4>
+            <h4>Pesquisar: </h4>
             <div>
         <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"]:""?>" 
         name="buscarFuncionario" placeholder="Buscar funcionário">

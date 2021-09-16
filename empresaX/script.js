@@ -14,6 +14,15 @@ function deletar(idFuncionario){
     }
 }
 
+//função de editar
+function editar(idFuncionario){
+    //teste de recebimento
+   //alert(idFuncionario);
+   window.location = "editar.php?id=" + idFuncionario;
+}
+
+
+
 document.getElementById("button__cadastrar").addEventListener("click", abrirCadastro)
 
 document.getElementById("button__cancelar").addEventListener("click", fecharCadastro)

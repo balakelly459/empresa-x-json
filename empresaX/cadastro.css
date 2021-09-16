@@ -74,7 +74,7 @@ h3 {
 }
 
 #button__cadastrar:hover{
-    background-color: rgb(177, 175, 175);
+    background-color: rgb(155, 105, 190);
     color: rgb(2, 2, 2);
 }
 
@@ -95,4 +95,9 @@ h3 {
     justify-content: space-between;
     width: 100%;
     gap: 20px;
+}
+
+#gender{
+    border-radius: 5px;
+    background-color: rgb(155, 105, 190);
 }

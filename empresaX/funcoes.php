@@ -62,3 +62,21 @@ function adicionarFuncionario(array $funcionario) {
 
       file_put_contents($nomeArquivo, $json);
   }
+
+  //Buscar funcionário por ID
+  function buscarFuncionarioPorId($nomeArquivo, $idFuncionario){
+
+      $empresax = lerArquivo($nomeArquivo);
+
+      foreach ($empresax as $funcionario) {
+          
+        if ($funcionario->id == $idFuncionario) {
+            
+            return $funcionario;
+        }
+
+      }
+
+      return false;
+
+  }

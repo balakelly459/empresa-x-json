@@ -83,7 +83,7 @@ if (
                 <td><?= $funcionario->country ?></td>
                 <td><?= $funcionario->department ?></td>
                 <td>
-            <button id="material-icons" class="material-icons">edit</button>
+            <button onclick="editar (<?=$funcionario->id ?>)" id="material-icons" class="material-icons">edit</button>
             <button onclick="deletar(<?= $funcionario->id ?>)"  id="material-icons-delete" class="material-icons">delete</button>
                 </td>
                 <!-- <td><button id="deletar">Excluir</button>
@@ -96,7 +96,7 @@ if (
 
     <div id="cadastrar__area">
         <form>
-            <h1>CADASTRAR FUNCIONARIO</h1>
+            <h1>CADASTRAR FUNCIONÁRIO</h1>
             <div id="perguntas__casdrastro">
                 <div class="perguntas">
                     <label for="firstName">Nome

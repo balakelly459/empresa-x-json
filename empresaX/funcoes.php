@@ -53,11 +53,12 @@ function adicionarFuncionario(array $funcionario) {
 
       foreach($empresax as $chave => $funcionario) {
           if ($funcionario->id == $idFuncionario) {
-              unset($empresax[$chave]);
+            unset($empresax[$chave]);
           }
+       
       }
 
-      $json = json_encode($empresax);
+      $json = json_encode(array_values($empresax));
 
       file_put_contents($nomeArquivo, $json);
   }

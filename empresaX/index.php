@@ -41,6 +41,7 @@ if (
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cadastro.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -83,8 +84,12 @@ if (
                 <td><?= $funcionario->ip_address ?></td>
                 <td><?= $funcionario->country ?></td>
                 <td><?= $funcionario->department ?></td>
-                <td><button id="deletar">Excluir</button>
-                <button class="material-icons">✏️</button></td>
+                <td>
+            <button class="material-icons">edit</button>
+            <button onclick="deletar(<?= $funcionario->id ?>)" class="material-icons">delete</button>
+                </td>
+                <!-- <td><button id="deletar">Excluir</button>
+                <button class="material-icons">✏️</button></td> -->
             </tr>
         <?php
         endforeach;

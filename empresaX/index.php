@@ -45,10 +45,6 @@ if (
 </head>
 
 <body>
-    <!-- <form action="">
-        <input type="text" name="funcionario" placeholder="Buscar funcionario">
-        <button>🔍</button>
-    </form> -->
     <table>
         <h1>Funcionários da Empresa X</h1>
         <h2>A empresa conta com <em> <?= $count ?> </em> funcionários</h2>
@@ -56,7 +52,9 @@ if (
             <h4>Pesquisar: </h4>
             <div>
                 <input type="text" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>" name="buscarFuncionario" placeholder="Buscar funcionário">
-                <button id="button_lupa">🔍</button>
+                <button id="button_lupa" class="material-icons">
+                    person_search
+                </button>
                 <button type="button" id="button__cadastrar">CADASTRAR FUNCIONÁRIO</button>
 
             </div>

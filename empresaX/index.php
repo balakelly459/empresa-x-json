@@ -85,8 +85,8 @@ if (
                 <td><?= $funcionario->country ?></td>
                 <td><?= $funcionario->department ?></td>
                 <td>
-            <button class="material-icons">edit</button>
-            <button onclick="deletar(<?= $funcionario->id ?>)" class="material-icons">delete</button>
+            <button id="material-icons" class="material-icons">edit</button>
+            <button onclick="deletar(<?= $funcionario->id ?>)"  id="material-icons-delete" class="material-icons">delete</button>
                 </td>
                 <!-- <td><button id="deletar">Excluir</button>
                 <button class="material-icons">✏️</button></td> -->

@@ -12,7 +12,7 @@ body{
  input{
      height: 30px;
      width: 1150px;
-     border-radius: 15px 0px 15px 0px;
+     border-radius: 15px 15px 15px 15px;
  }
 
  button{
@@ -61,3 +61,11 @@ table tr:nth-child(odd) {background: rgb(184, 182, 182)}
  tr th{
      height: 50px;
  }
+
+#material-icons:hover{
+   background-color: rgb(177, 175, 175);
+}
+
+#material-icons-delete:hover{
+    background-color: rgba(172, 8, 8, 0.794);
+}

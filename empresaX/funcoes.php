@@ -80,3 +80,19 @@ function adicionarFuncionario(array $funcionario) {
       return false;
 
   }
+
+  function editarFuncionario($nomeArquivo, $funcionarioEditado){
+
+    $empresax = lerArquivo($nomeArquivo);
+
+    foreach ($empresax as $chave => $funcionario) {
+        if ($funcionario->id == $funcionarioEditado["id"]) {
+            $empresax[$chave] = $funcionarioEditado;
+        }
+    }
+
+    $json = json_encode(array_values($empresax));
+
+    file_put_contents($nomeArquivo, $json);
+
+  }

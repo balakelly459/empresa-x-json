@@ -45,6 +45,7 @@ if (
 </head>
 
 <body>
+    <div class="quadro">
     <table>
         <h1>Funcionários da Empresa X</h1>
         <h2>A empresa conta com <em> <?= $count ?> </em> funcionários</h2>
@@ -145,7 +146,7 @@ if (
     </div>
 
     </div>
-
+    </div>
 </body>
 
 </html>

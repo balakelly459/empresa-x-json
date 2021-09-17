@@ -7,7 +7,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgba(191, 162, 238, 0.589);
+    background-color: black;
     }
  input{
      height: 30px;
@@ -88,4 +88,13 @@ table tr:nth-child(odd) {background: rgb(155, 105, 190)}
 
 em{
     color: white;
+}
+
+.quadro{
+    background-color: rgba(217, 196, 250, 0.993);
+    width: 1400px;
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
 }
